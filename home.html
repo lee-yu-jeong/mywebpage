@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">  
+	<title>ForDog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com//jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+	/*컨테이너 사이즈 조절*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: ;
+  height: 100%;
+  background-color: none;
+}
+
+.container>div {
+  background-color: white;
+  color: white;
+  width: 1000px;
+  height: 80%;
+}
+
+* {box-sizing: border-box;}
+body {font-family: Arial, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* 이미지슬라이드 컨테이너 */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* 이미지 점 */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/*점 색깔 바뀜*/
+.active {
+  background-color: #717171;
+}
+
+/* 애니메이션 */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+<div data-role="header" style="background-color: lightblue;">
+    <h4>FOR DOG</h4>
+  </div>
+  <br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="dog5.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="dog2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="dog4.jpg" style="width:100%">
+</div>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); 
+}
+</script>
+
+<br>
+
+<div class="container">
+	<div data-role="listview" data-inset="true">
+	 <li><a data-ajax="false" href="purpose.html">페이지 목적</a></li>	
+	 <li><a data-ajax="false" href="doginfo.html">강아지 정보</a></li>
+	 <li><a data-ajax="false" href="dogissue.html">강아지 뉴스</a></li>
+	 <li><a data-ajax="false" href="doggallery.html">갤러리</a></li>
+	 <li><a data-ajax="false" href="dogadoption.html">입양/분양</a></li>
+	 <li><a data-ajax="false" href="sponsor.html">유기견 후원</a></li>
+	</div>
+</div>
+
+<br><br>
+<div data-role="footer" class="footer" style="background-color: lightblue;">
+    <h4>&copy; 18114273 컴퓨터공학전공 이유정 </h4>
+  </div>
+
+</body>
+</html> 

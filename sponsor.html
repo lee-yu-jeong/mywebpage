@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com//jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: none;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div data-role="header" style="background-color: lightblue;">
+    <a href="home.html" data-ajax="false" class="button" data-icon="arrow-l" data-iconpos="notext" value="Icon only"></a>
+    <h4>유기동물 후원</h4>
+  </div>
+
+<div class="main">
+  <div class="container" style="text-align: center;">
+  	<h2>유기동물 후원하는 방법</h2>
+  	<p><img src="flowericon.png" class="icon">
+정기후원 or 일시후원 / 원하는 상품을 사면 일부 수익이 후원되는 방법 <img src="flowericon.png" class="icon">
+</p>
+  	<p> <img src="flowericon.png" class="icon">
+학대당해 버림받고 몸이불편한 동물들을 후원해주세요 <img src="flowericon.png" class="icon">
+</p>
+  </div>
+
+  <div class="container">
+  	<div class="ui-content">
+  		<a href="#myPopup1" data-rel="popup" class="ui-btn ui-corner-all ui-icon-gear ui-btn-icon-left">정기후원 또는 일시후원</a>
+  		<div data-role="popup" id="myPopup1" class="ui-content">
+  		<h3>후원 사이트 바로가기 링크</h3>
+  		<div data-role="collapsibleset">
+  			<div data-role="collapsible">
+  				<h3>동물자유연대</h3>
+  				<a href="https://han.gl/JFhoE">후원링크 - 바로가기</a>
+  			</div>
+
+  			<div data-role="collapsible">
+  				<h3>카라</h3>
+  				<a href="https://han.gl/i6a92">후원링크 - 바로가기</a>
+  			</div>
+
+  			<div data-role="collapsible">
+  				<h3>서울 유기동물 입양센터</h3>
+  				<a href="https://han.gl/TFq3t ">후원링크 - 바로가기</a>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</div>
+
+	<div class="container" >
+		<h2 style="text-align: center;">상품을 사서 일부 수익을 후원하는 방법</h2>
+		<div class="row">
+  		<div class="column">
+   		<div class="content">
+      	<a href="#myPopupDialog1" data-rel="popup" data-position-to="window"><img src="spon1.jpg" width="100%"></a>
+		</div>
+ 	 </div>
+ 		<div class="column">
+  		<div class="content">
+     	<a href="#myPopupDialog2" data-rel="popup" data-position-to="window"><img src="spon2.jpg" width="100%"></a>
+   		 </div>
+ 	 </div>
+  </div>
+
+
+		<div class="row">
+  		<div class="column">
+   		<div class="content">
+   			<a href="#myPopupDialog3" data-rel="popup" data-position-to="window"><img src="spon3.png" width="100%"></a>
+		</div>
+ 	 </div>
+ 		<div class="column">
+  		<div class="content">
+  			<a href="#myPopupDialog4" data-rel="popup" data-position-to="window"><img src="spon4.png" width="100%"></a>
+   		 </div>
+ 	 </div>
+  </div>
+
+
+
+	<div data-role="popup" id="myPopupDialog1">
+		<div data-role="header"><h2>IDUS 유기견 후원팔찌</h2></div>
+		<a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+			<img src="spon1.jpg" width="500px" height="500px">
+			<p><a href="https://han.gl/Lf9vN">상품 구매 바로가기 링크</a></p>
+		<div data-role="footer"></div>
+	</div>
+
+	<div data-role="popup" id="myPopupDialog2">
+		<div data-role="header"><h2>메리디아니 유기견 후원팔찌</h2></div>
+		<a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+			<img src="spon2.jpg" width="500px" height="500px">
+			<p><a href="https://han.gl/Lf9vN">상품 구매 바로가기 링크</a></p>
+		<div data-role="footer"></div>
+	</div>
+
+	<div data-role="popup" id="myPopupDialog3">
+		<div data-role="header"><h2>메이드모먼트 유기견후원 폰케이스</h2></div>
+		<a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+			<img src="spon3.png" width="500px" height="500px">
+			<p><a href="https://han.gl/aVGOo">상품 구매 바로가기 링크</a></p>
+		<div data-role="footer"></div>
+	</div>
+
+	<div data-role="popup" id="myPopupDialog4">
+		<div data-role="header"><h2>IDUS 유기동물후원 폰케이스</h2></div>
+		<a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+			<img src="spon4.png" width="500px" height="500px">
+			<p><a href="https://han.gl/Il5kU">상품 구매 바로가기 링크</a></p>
+		<div data-role="footer"></div>
+	</div>
+
+
+
+</div>
+</div>
+
+  <div data-role="footer" style="background-color: lightblue;">
+    <h4>&copy; 18114273 컴퓨터공학전공 이유정 </h4>
+  </div>
+</body>
+</html>
