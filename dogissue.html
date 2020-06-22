@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com//jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*이미지 슬라이드 스타일css*/
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next {font-size: 11px}
+}
+</style>
+</head>
+<body>
+	<div data-role="header"  style="background-color: lightblue;">
+		<a href="home.html" data-ajax="false" class="button" data-icon="arrow-l" data-iconpos="notext" value="Icon only"></a>
+		<h4>강아지 뉴스</h4>
+	</div>
+
+<div class="main">
+
+<h1> DOGNEWS</h1>
+<hr>
+
+<h2> TODAY DOGNEWS</h2>
+<p> Don't Buy a Dog, Adopt a Dog</p>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="../JQuery2/newsimg1.jpg" alt="newsimg1" style="width:100%">
+      <h3>눈 시퍼렇게 멍들 때까지 학대당했던 우리나라 백구가 미국 가서 생긴 변화</h3>
+      <p>학대당해 눈이 시퍼렇게 멍들었던 백구가 미국으로 입양을 떠나 ‘견생역전’한 근황이 전해졌다.지난 9일 동물권보호단체 ‘케어’는 폭행을 당해 하얀 털 위로 눈이 시퍼렇게 멍들었던 백구, ‘둥이’의 사연을 소개했다.‘케어’에 따르면 앞서 4년 전인 지난 2016년, 부산에서 “백구 한 마리가 조금도 움직이지 못하게 짧은 목줄에 묶여 주인에게 학대를 당하고 있다”는 신고가 접수됐다.주인은 강아지를 건물 3층에서 던지고, 철삿줄로 입을 묶고, 꼬챙이로 찌르는 등 모진 가학행위를 일삼았다.한국에서 무차별적인 폭행으로 몸과 마음에 아픈 상처를 지닌 아이, 둥이는 다행히도 미국 생활에 완벽히 적응했다.행복한 둥이의 ‘견생역전’ 근황을 접한 누리꾼들은 “너무 감동적이다”, “사지 말고 입양하자” 등의 반응을 보이고 있다.출처-에포크타임스</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="../JQuery2/newsimg4.jpg" alt="newsimg4" style="width:100%">
+      <h3>홍수에 떠내려 간 3살 주인 끝까지 지킨 강아지 폴리</h3>
+      <p>호주에서 발생한 홍수에 떠내려갔던 3살 여아가 함께 떠내려간 반려견의 보호 덕에 24시간 만에 구조됐다.서호주 경찰 당국에 따르면 지난 15일, 서호주 필버라주에 사는 3살 여아 마틸다는 갑작스럽게 쏟아진 폭우에 홍수에 떠내려갔다. 당시 마틸다의 반려견인 잭 러셀테리어 폴리도 그와 함께 떠내려 갔다.24시간 가까이 이어진 수색 끝에, 마틸다는 그의 집에서 남쪽으로 3.5km 가량 떨어진 곳에서 헬기에 의해 구조됐다. 24시간 동안 누구의 도움도 받지 못하고 홀로 떠내려가던 마틸다를 보호한 건 반려견 폴리였다.사진 속 마틸다는 온 몸에 흙이 묻었지만 다친 데 없이 건강한 것으로 알려졌다. 사진 속엔 그를 지켜낸 폴리도 늠릉한 모습으로 등장했다.경찰 당국은 마틸다와 폴리는 현재 가족들의 품으로 안전하게 되돌아갔다고 전했다. 출처-머니투데이
+</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="content">
+    <img src="../JQuery2/newsimg3.jpg" alt="newsimg3" style="width:100%">
+      <h3>아빠 틀니 훔쳐 가지고 놀다 역대급 ‘인생 사진’ 찍힌 강아지</h3>
+      <p>얼마 전 벤은 코로나 19로 인한 자가격리 기간 동안 집에서 지루함을 달래기 위해 할로윈 데이를 위해 구매했던 가짜 이빨, 즉 틀니를 이용해 엽기사진을 찍어올리기로 한 후 구매한 틀니를 잠시 테이블 위에 올려뒀다고 한다. 그런데 그는 테이블에서 틀니가 사라졌음을 알게 되었다.아무리 찾아다녀도 도저히 찾을 수 없던 틀니를 발견하게 된건 토마스를 찾은 뒤였다. 틀니를 훔쳐 간 토마스의 모습은 커다란 틀니를 자신의 입에 정확히 맞춰 넣은 모습이었다. 커다란 틀니가 마치 실제 이빨처럼 보여 웃음을 자아낸다.작은 얼굴에 대비되는 거대한사람 이빨을 가진 토마스는 독특한 비주얼을 자랑하고 있다.토마스의 사진은 곧 온라인상에서 폭발적인 반응을 일으키고 있다.누리꾼들은 “진짜 너무 웃기다”, “어디서 많이 본 듯한 비주얼이다”, “은근 잘 어울린다” 등의 반응을 보였다. 출처-코리안즈</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="../JQuery2/newsimg11.jpg" alt="newsimg11" style="width:100%">
+      <h3>"왜 집에서 일해?"…생방송 중 들이닥친 '시선강탈' 강아지</h3>
+      <p>주인에게 관심 받고 싶어하던 반려견이 '방송사고'를 터뜨려 시청자들의 눈길을 끌었습니다.현지 시간으로 지난 1일 NBC 등 외신들은 미국 한 기상캐스터의 반려견이 일기예보 생방송 화면 도중 등장했다고 보도했습니다.폭스 뉴스 채널에서 플로리다주 탬파 지역 일기예보를 맡은 폴 델레가토 씨는 지난달 자신의 집에서 방송을 진행하던 중 불청객을 맞았습니다. 반려견 브로디가 꼬리를 힘차게 흔들며 갑자기 생방송 화면에 등장한 겁니다.브로디는 촬영 기사를 발견한 뒤 창가로 다가가 마구 뛰었고, 델레가토 씨의 얼굴은 완전히 가려지고 말았습니다. 델레가토 씨가 난감해하며 "죄송하다"고 하자, 뉴스를 진행하던 앵커는 "괜찮다. 브로디를 볼 수 있다면 날씨는 몰라도 좋다"며 위트있게 상황을 넘겼습니다.생방송을 장악한 브로디의 모습은 폭스 뉴스 채널 SNS에 공개돼 온라인상에서도 큰 사랑을 받았습니다. 누리꾼들은 "안 좋은 소식으로 가득했던 뉴스가 브로디 덕분에 밝아졌다"며 즐거워했습니다.출처-SBS 뉴스 </p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<div class="content">
+  
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <div class="numbertext">1 / 5</div>
+  <img src="../JQuery2/newsimg5.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 5</div>
+  <img src="../JQuery2/newsimg6.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 5</div>
+  <img src="../JQuery2/newsimg7.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">4 / 5</div>
+  <img src="../JQuery2/newsimg8.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">5 / 5</div>
+  <img src="../JQuery2/newsimg9.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+  <h3>짖는 순간 전기충격, ‘짖음 방지기’로 강아지 교육시키는 견주에 방송중 ‘정색’한 강형욱</h3>
+  <p>강형욱이 지켜보던 VCR을 속 보호자는 무언가를 들고 사랑이에게 “이거 무섭지?”라고 주의를 준다. 사랑이는 물건을 보고 잔뜩 겁에 질린 모습을 보였다.보호자가 들고 있던 물건은 바로 전기 충격을 주는 짖음 방지기다..</p>
+  <p>보호자는 “민원이 너무 심하게 들어와서 물리적으로 타격을 받아야 더 짖지 않고 교육으로는 잘 안되더라”라며 어쩔 수 없이 채우게 됐다 밝혔다.짖음 방지기를 보고 무서워하는 사랑이를 본 강형욱은 “극도로 싫어하지. 얼마나 아픈데”라며 실제로 짖음 방지기를 착용해봤다는 강형욱은 소리도 안 나올 정도로 매우 고통이 컸다고 밝혔다.</p>
+  <p>짖음 방지기는 영국에서 2018년 이후 판매 금지 조치가 내려진 도구로 우리나라에서는 반려견에 사용 하는 데 찬반 여론이 분분하다.</p>
+  <p>강형욱은 사랑이의 행동이 많이 맞고 생활한 강아지의 행동처럼 보인다고 설명했고 전기 충격 짖음 방지기를 사용하고 있는 보호자의 모진 행동을 질책하였다.그러면서 강형욱은 사랑이의 공격성이 반복될 때마다 강아지를 진정시키고 ‘앉아’ 훈련을 하도록 부탁했고 사랑이는 점차 나아지는 모습을 보여 시청자의 안도를 불렀다. 출처-커플뉴스</p>
+
+</div>
+<!-- END MAIN -->
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+	<br>
+	<div data-role="footer"  style="background-color: lightblue;">
+		<h4>&copy; 18114273 컴퓨터공학전공 이유정 </h4>
+	</div>
+
+</body>
+</html>

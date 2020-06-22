@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com//jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.popcontent img{
+  max-width: 70%;
+}
+
+.container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  height: 100%;
+  background-color: none;
+}
+
+.container>div {
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+</style>
+</head>
+<body>
+
+  <div data-role="header"  style="background-color: lightblue;">
+    <a href="home.html" data-ajax="false" class="button" data-icon="arrow-l" data-iconpos="notext" value="Icon only"></a>
+    <h4>갤러리</h4>
+  </div>
+
+<div class="container">
+<!-- Header -->
+<div class="header" id="myHeader">
+  <p><img src="flowericon.png" class="icon"> 버튼을 누르면 Gridview가 바뀌어 갤러리가 재정렬됩니다. <img src="flowericon.png" class="icon"></p>
+  <br>
+  <button class="ui-btn ui-btn-inline ui-corner-all" onclick="one()">1</button>
+  <button class="ui-btn ui-btn-inline ui-corner-all active" onclick="two()">2</button>
+  <button class="ui-btn ui-btn-inline ui-corner-all" onclick="four()">4</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <a href="#myPopup1" data-rel="popup" data-position-to="window"><img src="../JQuery2/one.jpg" style="width:100%"></a>
+    <a href="#myPopup2" data-rel="popup" data-position-to="window"><img src="../JQuery2/two.jpg" style="width:100%"></a>
+    <a href="#myPopup3" data-rel="popup" data-position-to="window"><img src="../JQuery2/three.jpg" style="width:100%"></a>
+    <a href="#myPopup4" data-rel="popup" data-position-to="window"><img src="../JQuery2/Samoyed.jpg" style="width:100%"></a>
+    <a href="#myPopup5" data-rel="popup" data-position-to="window"><img src="../JQuery2/dog1.jpg" style="width:100%"></a>
+    <a href="#myPopup6" data-rel="popup" data-position-to="window"><img src="../JQuery2/five.jpg" style="width:100%"></a>
+    <a href="#myPopup7" data-rel="popup" data-position-to="window"><img src="../JQuery2/six.jpg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="#myPopup8" data-rel="popup" data-position-to="window"><img src="../JQuery2/eight.jpg" style="width:100%"></a>
+    <a href="#myPopup9" data-rel="popup" data-position-to="window"><img src="../JQuery2/GoldenRetriever.jpg" style="width:100%"></a>
+    <a href="#myPopup10" data-rel="popup" data-position-to="window"><img src="../JQuery2/ten.jpg" style="width:100%"></a>
+    <a href="#myPopup11" data-rel="popup" data-position-to="window"><img src="../JQuery2/eleven.jpg" style="width:100%"></a>
+    <a href="#myPopup12" data-rel="popup" data-position-to="window"><img src="../JQuery2/dog4.jpg" style="width:100%"></a>
+  </div>  
+  <div class="column">
+    <a href="#myPopup13" data-rel="popup" data-position-to="window"><img src="../JQuery2/fourteen.jpg" style="width:100%"></a>
+    <a href="#myPopup14" data-rel="popup" data-position-to="window"><img src="../JQuery2/SiberianHusky.jpg" style="width:100%"></a>
+    <a href="#myPopup15" data-rel="popup" data-position-to="window"><img src="../JQuery2/sixteen.jpg" style="width:100%"></a>
+    <a href="#myPopup16" data-rel="popup" data-position-to="window"><img src="../JQuery2/seventeen.jpg" style="width:100%"></a>
+    <a href="#myPopup17" data-rel="popup" data-position-to="window"><img src="../JQuery2/eighteen.jpg" style="width:100%"></a>
+    <a href="#myPopup18" data-rel="popup" data-position-to="window"><img src="../JQuery2/seven.jpg" style="width:100%"></a>
+    <a href="#myPopup19" data-rel="popup" data-position-to="window"><img src="../JQuery2/nine.jpg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="#myPopup20" data-rel="popup" data-position-to="window"><img src="../JQuery2/dog2.jpg" style="width:100%"></a>
+    <a href="#myPopup21" data-rel="popup" data-position-to="window"><img src="../JQuery2/dog3.jpg" style="width:100%"></a>
+    <a href="#myPopup22" data-rel="popup" data-position-to="window"><img src="../JQuery2/four.jpg" style="width:100%"></a>
+    <a href="#myPopup23" data-rel="popup" data-position-to="window"><img src="../JQuery2/twelve.jpg" style="width:100%"></a>
+    <a href="#myPopup24" data-rel="popup" data-position-to="window"><img src="../JQuery2/dog5.jpg" style="width:100%"></a>
+    <a href="#myPopup25" data-rel="popup" data-position-to="window"><img src="../JQuery2/fifteen.jpg" style="width:100%"></a>
+    
+</div>
+</div>
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+// Declare a loop variable
+var i;
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<div data-role="popup" id="myPopup1" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/one.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup2" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/two.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup3" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/three.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup4" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/Samoyed.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup5" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/dog1.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup6" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/five.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup7" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/six.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup8" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/eight.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup9" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/GoldenRetriever.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup10" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/ten.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup11" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/eleven.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup12" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/dog4.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup13" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/fourteen.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup14" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/SiberianHusky.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup15" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/sixteen.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup16" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/seventeen.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup17" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/eighteen.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup18" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/seven.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup19" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/nine.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup20" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/dog2.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup21" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/dog3.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup22" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/four.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup23" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/twelve.jpg" style="width:100%;height:100%;" >
+  </div>
+  <div data-role="popup" id="myPopup24" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/dog5.jpg" style="width:100%;height:100%;">
+  </div>
+  <div data-role="popup" id="myPopup25" data-overlay-theme="b" >
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+      <img src="../JQuery2/fifteen.jpg" style="width:100%;height:100%;" >
+  </div>
+
+
+
+<br><br>
+<div data-role="footer"  style="background-color: lightblue;">
+    <h4>&copy; 18114273 컴퓨터공학전공 이유정 </h4>
+  </div>
+
+</body>
+</html>
